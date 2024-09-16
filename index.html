@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Snap Store</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="video-container">
+      <video autoplay></video>
+    </div>
+
+    <div class="action-container">
+      <div class="record-btn-container">
+        <div class="record-btn"></div>
+      </div>
+      <div class="capture-btn-container">
+        <div class="capture-btn"></div>
+      </div>
+      <span class="material-symbols-outlined" title="Open Gallery">
+        perm_media
+      </span>
+    </div>
+    <div class="timer-container">
+      <h3 class="timer">00:00:00</h3>
+    </div>
+    <div class="filter-container">
+      <div class="filter none"></div>
+      <div class="filter jaipur"></div>
+      <div class="filter rio-de-janerio"></div>
+      <div class="filter tokyo"></div>
+    </div>
+    <div class="filter-layer"></div>
+    <script src="https://unpkg.com/shortid-dist@1.0.5/dist/shortid-2.2.13.min.js"></script>
+    <script src="./db.js"></script>
+    <script src="./script.js"></script>
+    <script>
+      let gallery = document.querySelector(".material-symbols-outlined");
+      gallery.addEventListener("click", (e) => {
+        location.assign("./gallery.html");
+      });
+    </script>
+  </body>
+</html>
